@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.london.smartserve">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".FirebaseHandler"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/smartservelogos"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/smartservelogos"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".Tokens">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Main"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".jounalentries"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name=".directorhome" />
+        <activity android:name=".defaultprocessing" />
+        <activity android:name=".defaultlist" />
+        <activity
+            android:name=".individualaccount"
+            android:screenOrientation="landscape" />
+        <activity android:name=".secrecords" />
+        <activity android:name=".memberpage" />
+        <activity android:name=".DeviceList" />
+        <activity android:name=".groupstats" />
+        <activity android:name=".inbox" />
+        <activity
+            android:name=".payment"
+            android:parentActivityName=".memberlist" />
+        <activity android:name=".loanapplication" />
+        <activity android:name=".loanapplication2" />
+        <activity android:name=".loanapplications" />
+        <activity android:name=".support" />
+        <activity android:name=".grouppayment" />
+        <activity
+            android:name=".loandefaultsperfomanceanalysis"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".advancedefaultperfomanceanalysis"
+            android:screenOrientation="landscape" />
+        <activity android:name=".savingsdetails" />
+        <activity android:name=".loandetails" />
+        <activity android:name=".advancedetails" />
+        <activity android:name=".addmember" />
+        <activity android:name=".memberlistb" />
+        <activity android:name=".memberlistc" />
+        <activity android:name=".memberlistcc" />
+        <activity android:name=".memberlistd" />
+        <activity android:name=".memberlistj" />
+        <activity android:name=".monthlybudgetting" />
+        <activity android:name=".annualbudgetting" />
+        <activity android:name=".memberlisti" />
+        <activity android:name=".newmemberemail" />
+        <activity
+            android:name=".memberlist"
+            android:parentActivityName=".meeting" />
+        <activity android:name=".loanprocessing" />
+        <activity android:name=".setupgroup" />
+        <activity android:name=".groupinfo" />
+        <activity android:name=".coordinator" >
+            <intent-filter>
+                <action android:name="com.example.london.smartserve_TARGET_NOTIFICATION2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".loansf" />
+        <activity android:name=".formssf" />
+        <activity
+            android:name=".grouplist"
+            android:parentActivityName=".coordinator" >
+        </activity>
+        <activity android:name=".coordinatoractivity" />
+        <activity
+            android:name=".meeting"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".advanceprocessing" />
+        <activity android:name=".report1" />
+        <activity android:name=".report2" />
+        <activity
+            android:name=".masterhome"
+            android:label="@string/title_activity_masterhome"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.example.london.smartserve_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".newemployeeemail" />
+        <activity android:name=".addemployee" />
+        <activity android:name=".fieldstart" />
+        <activity android:name=".mastercashrepports" />
+        <activity android:name=".masterallreports" />
+        <activity android:name=".groupslist" />
+        <activity android:name=".groupslistsec" />
+        <activity
+            android:name=".perfomanceanalysis"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".acceptloan"
+            android:theme="@style/CustomStyle" />
+        <activity android:name=".reportsview" />
+        <activity android:name=".editmemberfinance" />
+        <activity android:name=".editmemberfinance2" />
+        <activity android:name=".editmember" />
+        <activity android:name=".mpesapayment" />
+        <activity android:name=".mpesapayment2" />
+        <activity android:name=".mpesarcpts" />
+        <activity android:name=".groupsetting" />
+        <activity android:name=".secmpesarcpts" />
+        <activity android:name=".monthselector" />
+        <activity android:name=".monthselector2" />
+        <activity android:name=".monthselector3" />
+        <activity android:name=".employeebasic" />
+        <activity android:name=".dateselector" />
+        <activity android:name=".dateselector2" />
+        <activity android:name=".dateselector3" />
+        <activity android:name=".dateselector4" />
+        <activity android:name=".dateselector5" />
+        <activity android:name=".dateselector6" />
+        <activity android:name=".dateselector7" />
+        <activity
+            android:name=".groupreports"
+            android:screenOrientation="landscape" />
+        <activity android:name=".managerhome" />
+        <activity android:name=".dailybudgetting" />
+        <activity android:name=".meetingreceipt" />
+        <activity android:name=".memberliste" />
+        <activity android:name=".memberlistf" />
+        <activity android:name=".memberlistg" />
+        <activity android:name=".schoolfeespayment" />
+        <activity android:name=".schoolfeesadvanceprocessing" />
+        <activity android:name=".schoolfeesreport" />
+        <activity
+            android:name=".schoolfeesperfomanceanalysis"
+            android:screenOrientation="landscape" />
+        <activity android:name=".receiptselection" />
+        <activity android:name=".secretary" />
+        <activity android:name=".emloyeelist" />
+        <activity android:name=".employees" />
+        <activity
+            android:name=".emppopup"
+            android:theme="@style/CustomStyle" />
+        <activity
+            android:name=".empcash"
+            android:theme="@style/CustomStyle" />
+        <activity
+            android:name=".meetpopup"
+            android:theme="@style/CustomStyle" />
+        <activity android:name=".editgroups" />
+        <activity
+            android:name=".editemployee"
+            android:parentActivityName=".coordinator" />
+        <activity android:name=".employeecashtrack" />
+        <activity android:name=".mpesareport" />
+        <activity android:name=".expenseitems" />
+        <activity android:name=".budgetreport" />
+        <activity
+            android:name=".memberstats"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".accountinghome"
+            android:parentActivityName=".masterhome" />
+        <activity android:name=".bankact" />
+        <activity android:name=".dailycashstatement" />
+        <activity android:name=".monthlycashstatement" />
+        <activity
+            android:name=".banktransactions"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".banktransactionsspecific"
+            android:screenOrientation="landscape" />
+        <activity android:name=".banksactivity" />
+        <activity
+            android:name=".trialbalance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".balancesheet"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".profitloss"
+            android:screenOrientation="landscape" />
+        <activity android:name=".paymentsec" />
+    </application>
+
+</manifest>

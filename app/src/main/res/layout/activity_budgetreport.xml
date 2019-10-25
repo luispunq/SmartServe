@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".budgetreport">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cordheader"
+        android:background="@color/colorPrimaryLight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/budgetday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView37"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/textView37"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Budget for"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/gridtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/budgetday"
+                    android:layout_marginTop="5dp"
+                    android:fillViewport="false">
+
+                    <RelativeLayout
+                        android:id="@+id/top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:id="@+id/tebo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/colorPrimaryDark"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Category" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Description" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="-1dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Debit Account" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Credit Account" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Amount" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text=""
+                                android:visibility="gone" />
+
+
+                        </TableRow>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/itemsadded"
+                            android:layout_width="850dp"
+                            android:layout_height="300dp"
+                            android:layout_below="@+id/tebo">
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                    </RelativeLayout>
+
+
+                </HorizontalScrollView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/step4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Summary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/sumadetail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/textView15"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sumtitle5"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Amount from Bank"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bankamnt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="0.5"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sumadetail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/sumadetail1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sumatitle6"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Budget amount"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/budamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sumadetail2s"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/sumadetail2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sumatitle6s"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Secretary Received"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/secrecie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/buttons"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sumadetaile2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/sumadetail2s"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sumatitlee6"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Balance"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/netba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/button3"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttons"
+                android:text="DONE" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

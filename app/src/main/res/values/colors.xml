@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FE2EC8</color>
+    <color name="colorComplement">#f4fa58</color>
+    <color name="colorPrimaryDark">#50ff00bf</color>
+    <color name="colorAccent">#2E2EFE</color>
+    <color name="colorPrimaryLight">#F6CEF5</color>
+    <color name="lightgray">#ededed</color>
+    <color name="greycolor">#ededed</color>
+    <color name="text_color_primary">#000000</color>
+    <color name="colorBackground">#00fafafa</color>
+    <color name="absent">#FF0000</color>
+    <color name="present">	#7CFC00</color>
+</resources>

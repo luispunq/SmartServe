@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/nav_employeesa"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Employees" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:title="Operations">
+
+            <item
+                android:id="@+id/nav_budgets"
+                android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+                android:title="Budget" />
+
+
+            <item
+                android:id="@+id/nav_loans"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                android:title="Loans" />
+
+    </item>
+</group>
+
+</menu>

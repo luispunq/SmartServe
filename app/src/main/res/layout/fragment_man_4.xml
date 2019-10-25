@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight">
+
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/picture2">
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/transdetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryLight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:padding="5dp"
+                android:text="Budgets and Expenses"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/textView29"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dailycard"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="-5dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_today_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Daily Budgeting"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/monthlycard"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="-5dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/calendar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Monthly Budget"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/options2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/options"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/annualcard"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="-5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/finances" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Annual Budgeting"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/expensecard"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="-5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="10dp"
+                            android:src="@mipmap/shilling" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Expenses"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgray" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/groupstat1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/options2"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/gstat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/gtitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Annual Expenses"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/annualstats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp">
+
+
+                        <TextView
+                            android:id="@+id/budgettot"
+                            android:layout_width="163dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toStartOf="@+id/expandannual"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:textAlignment="viewEnd"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gtitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="5dp"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:text="Budget Total"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/expandannual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="end"
+                            android:src="@drawable/ic_expand_more_black_24dp" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/annualitems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="false"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/annualtop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:id="@+id/antebo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimaryDark"
+                                android:showDividers="middle">
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Category" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Description" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="-1dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Debit Account" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Credit Account" />
+
+                                <TextView
+                                    android:id="@+id/textView14"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Amount" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:visibility="invisible" />
+
+
+                            </TableRow>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/annualitemsin"
+                                android:layout_width="900dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/antebo">
+
+                            </android.support.v7.widget.RecyclerView>
+
+
+                        </RelativeLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/groupstat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupstat1"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/gstat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/gtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Monthly Expenses"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/monthlystats"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="3dp">
+
+
+                        <TextView
+                            android:id="@+id/monbudgettot"
+                            android:layout_width="163dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toStartOf="@+id/expandmonthly"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:textAlignment="viewEnd"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gtitle45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="5dp"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:text="Budget Total"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/expandmonthly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="end"
+                            android:src="@drawable/ic_expand_more_black_24dp" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/monthitems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="false"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/monthtop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:id="@+id/montebo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimaryDark"
+                                android:showDividers="middle">
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Category" />
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Description" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Debit Account" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Credit Account" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Amount" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:visibility="invisible" />
+
+
+                            </TableRow>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/monthlyitemsin"
+                                android:layout_width="900dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/montebo">
+
+                            </android.support.v7.widget.RecyclerView>
+
+
+                        </RelativeLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/groupstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupstat"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/gstate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/gtitlee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Daily Expenses"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/dailystats"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="3dp">
+
+
+                        <TextView
+                            android:id="@+id/daiybudgettot"
+                            android:layout_width="163dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toStartOf="@+id/expanddaily"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:textAlignment="viewEnd"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gtitle455"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="5dp"
+                            android:clickable="false"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:text="Budget Total"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/expanddaily"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="end"
+                            android:src="@drawable/ic_expand_more_black_24dp" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/dailyitems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="false"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/dailytop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:visibility="visible">
+
+                            <TableRow
+                                android:id="@+id/datebo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/colorPrimaryDark"
+                                android:showDividers="middle">
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Category" />
+
+                                <TextView
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Description" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Debit Account" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Credit Account" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text="Amount" />
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:background="@drawable/celloutline"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:visibility="invisible" />
+
+
+                            </TableRow>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/dailyitemsin"
+                                android:layout_width="900dp"
+                                android:layout_height="100dp"
+                                android:layout_below="@+id/datebo">
+
+                            </android.support.v7.widget.RecyclerView>
+
+
+                        </RelativeLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/activemeetings"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/manitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budgetwid"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/bgstat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bgtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Tasks"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/btit"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tasks"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Manager Tasks"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ballgroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/loantask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="2dp"
+                        app:cardBackgroundColor="@color/colorPrimaryLight"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <TextView
+                            android:id="@+id/bgtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:clickable="true"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="5dp"
+                            android:text="Loans"
+                            android:textAlignment="viewStart"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bgtitle4unseen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:clickable="false"
+                            android:padding="5dp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/querriestask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="2dp"
+                        app:cardBackgroundColor="@color/colorPrimaryLight"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <TextView
+                            android:id="@+id/bgtitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:clickable="true"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="5dp"
+                            android:text="Inbox"
+                            android:textAlignment="viewStart"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bgtitle4unread"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:clickable="false"
+                            android:padding="5dp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/defaultstask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="2dp"
+                        app:cardBackgroundColor="@color/colorPrimaryLight"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:clickable="true"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="5dp"
+                            android:text="Default Notifications"
+                            android:textAlignment="viewStart"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/defnotfs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:clickable="false"
+                            android:padding="5dp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!--TextView
+                        android:id="@+id/title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:text="More >>"
+                        android:textColor="@color/colorComplement"
+                        android:textSize="18sp"
+                        android:textStyle="bold" /-->
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/groupstat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/gstat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/gtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="DAY SUMMARY"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/tit"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/finance"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/types"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Total Groups Today"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/allgroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/managergrpslist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/gtitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:text="Assignments"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/budgetwid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupstat"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/bgstat3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bgtitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Day Budgets"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/btit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/budget"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btypes3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btitle13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Group Allocations"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ballgroups3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btypes3t"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btitle13t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Transport Allocations"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ballgroups3t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="5dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bgtitle23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:text="Budgeting"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cashsummaries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/manitems"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/cashes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cashtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:fadingEdge="vertical"
+                        android:focusable="true"
+                        android:padding="2dp"
+                        android:text="Summaries"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/cashdetail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/masterdailyreport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                            <ImageView
+                                android:id="@+id/rowimage"
+                                android:layout_width="96dp"
+                                android:layout_height="96dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@mipmap/calendar" />
+
+                            <TextView
+                                android:id="@+id/rowtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:text="Field Reports"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/masteroverall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                            <ImageView
+                                android:id="@+id/rowimage2"
+                                android:layout_width="100dp"
+                                android:layout_height="96dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@mipmap/reports" />
+
+                            <TextView
+                                android:id="@+id/rowtitle2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:text="Budget Report"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

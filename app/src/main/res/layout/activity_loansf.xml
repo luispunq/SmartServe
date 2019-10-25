@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loansf">
+
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@drawable/loans">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:text="Sort :"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/inputoutline" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/lapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/lapptop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/loansapplied"
+                android:layout_width="450dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/lacc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/lacctop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/teboacc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Date"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Name"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:id="@+id/textView43"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Group"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Amount"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Installment"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Status"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/loansapproved"
+                android:layout_width="1200dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/teboacctots1"
+                android:layout_below="@+id/teboacc"
+                android:layout_centerHorizontal="true" />
+
+            <TableRow
+                android:id="@+id/teboacctots1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalamounnt1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalinstallment1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/ldec"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/ldectop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tebodec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Date"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Name"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:id="@+id/textView42"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Group"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Amount"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Installment"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Status"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/loandeclined"
+                android:layout_width="1200dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/teboacctots2"
+                android:layout_below="@+id/tebodec"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+
+            <TableRow
+                android:id="@+id/teboacctots2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalamounnt2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalinstallment2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/ldis"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filters"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/ldistop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tebodis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Date"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Group"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Amount"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Installment"
+                    android:textSize="16sp" />
+
+                <TextView
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Status"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/loandisbursed"
+                android:layout_width="1200dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/teboacctots3"
+                android:layout_below="@+id/tebodis"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible" />
+
+            <TableRow
+                android:id="@+id/teboacctots3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalamounnt3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalinstallment3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="Kshs.0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="57dp"
+        android:clickable="true"
+        android:src="@drawable/ic_print_black_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtondate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="0dp"
+        android:clickable="true"
+        android:src="@drawable/ic_today_black_24dp" />
+
+
+</RelativeLayout>

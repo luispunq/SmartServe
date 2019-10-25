@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editemployee">
+
+    <ScrollView
+        android:id="@+id/transdetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryLight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/updatebtn"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/profilenamemod"
+                android:layout_alignEnd="@+id/profilenamemod"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignTop="@+id/profilenamemod"
+                android:adjustViewBounds="true"
+                android:background="@drawable/buttons"
+                android:cropToPadding="true"
+                android:src="@drawable/ic_sync_black_24dp" />
+
+            <TextView
+                android:id="@+id/cuurname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/profilenamemod2"
+                android:layout_alignParentStart="true"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="Change Password"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/profilenamemod2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilenamemod"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter New Password"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <TextView
+                android:id="@+id/cuurname22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/profilenamemod22"
+                android:layout_alignParentStart="true"
+                android:clickable="true"
+                android:padding="5dp"
+                android:text="Change Contact"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/profilenamemod22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilenamemod2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter New Contacts"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_toolbaraccmodify"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/colorPrimary"
+                android:backgroundTint="#FEFBDE"
+                android:elevation="8dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="My Profile"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.Toolbar>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileimagebtnmod"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="false"
+                android:layout_below="@+id/my_toolbaraccmodify"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Profile Image"
+                android:elevation="20sp"
+                android:src="@mipmap/smartservelogos" />
+
+            <EditText
+                android:id="@+id/profilenamemod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileimagebtnmod"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter New Name"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <Button
+                android:id="@+id/accountsetupbtnmod"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/profilenamemod22"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/buttons"
+                android:elevation="7dp"
+                android:text="FINISH"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="450dp" />
+
+            <ImageView
+                android:id="@+id/updatebtn1"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/profilenamemod2"
+                android:layout_alignEnd="@+id/profilenamemod2"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignTop="@+id/profilenamemod2"
+                android:background="@drawable/buttons"
+                android:src="@drawable/ic_sync_black_24dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/cuurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/profilenamemod"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="35dp"
+                android:padding="15dp"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

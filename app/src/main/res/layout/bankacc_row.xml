@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bankaccrow_row"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/badate"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="date"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bachequenum"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="cheque"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/badetails"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="details"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/badepo"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="depo"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bawith"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="with"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bastatus"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="staus"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </TableRow>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

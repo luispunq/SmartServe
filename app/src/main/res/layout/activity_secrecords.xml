@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".secrecords"
+    android:background="@color/colorPrimaryLight">
+
+
+    <RelativeLayout
+        android:id="@+id/supportheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="SMART SERVE CAPITAL LIMITED"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViews"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:text="'For your financial needs'"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textViews2"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textViews"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="LEDGER BOOK"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ledgerdate"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViews2"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/gridtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/supportheader"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:id="@+id/tebo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Group Name" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Amount Given" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Amount Received" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Officer" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ledgerlistt"
+                android:layout_width="1090dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tebototals"
+                android:layout_below="@+id/tebo"
+                android:layout_marginRight="0dp" />
+
+            <TableRow
+                android:id="@+id/tebototals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Total" />
+
+                <TextView
+                    android:id="@+id/ledtotal1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/ledtotal"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+
+
+
+    </HorizontalScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/saveledger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginBottom="35dp"
+        android:clickable="true"
+        android:src="@drawable/ic_check_black_24dp" />
+
+</RelativeLayout>

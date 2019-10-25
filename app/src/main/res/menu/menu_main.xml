@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.london.smartserve.Main">
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="Log Out"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="100"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_cashaccount"
+        android:orderInCategory="100"
+        android:title="Account"
+        android:icon="@drawable/ic_person_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_hep"
+        android:orderInCategory="100"
+        android:title="Support"
+        android:icon="@mipmap/support"
+        app:showAsAction="never" />
+</menu>

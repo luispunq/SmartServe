@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".groupreports">
+
+    <HorizontalScrollView
+        android:id="@+id/gridtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/top2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:id="@+id/tebo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/totalnum"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="#"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalGroupname"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Group Name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalmembers"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Members"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalAdvancesCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Advances"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalLoansCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Loans"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalSavingsCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Savings"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/income"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Contribution"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalregs"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Registration Fees"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalofficer"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Officer"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/groups"
+                android:layout_width="1550dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tebototals2"
+                android:layout_below="@+id/tebo2"
+                android:animateLayoutChanges="false"
+                android:animationCache="false" />
+
+            <TableRow
+                android:id="@+id/tebototals2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:showDividers="middle"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/ttotalnum"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalGroupname"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalmembers"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalAdvancesCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalLoansCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalSavingsCarriedForward"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tincome"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalregs"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ttotalofficer"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-1dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/export"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:clickable="true"
+        android:src="@drawable/ic_file_download_black_24dp" />
+
+</RelativeLayout>

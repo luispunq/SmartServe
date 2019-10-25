@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reportlistcardnames"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/listnames"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp" />
+
+
+        </TableRow>
+    </LinearLayout>
+
+</RelativeLayout>

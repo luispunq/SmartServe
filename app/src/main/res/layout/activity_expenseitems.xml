@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expenseitems">
+
+    <RelativeLayout
+        android:id="@+id/cordheader"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/expenses"></RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryLight"
+        android:layout_below="@+id/cordheader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/expp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/bgdadditems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView13"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/spn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="10dp"
+                            android:clickable="true"
+                            android:fadingEdge="vertical"
+                            android:focusable="true"
+                            android:padding="2dp"
+                            android:text="add items"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/itemsdetail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/itemstitle5"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="start"
+                                android:padding="5dp"
+                                android:text="Name"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/nnname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="end"
+                                android:padding="5dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/itemsdetail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/itemstitle52"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="start"
+                                android:padding="5dp"
+                                android:text="Credit Account"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/crdaccnt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="end"
+                                android:padding="5dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/itemsdetailg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/itemstitle5g2"
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="start"
+                                android:padding="5dp"
+                                android:text="Expense Period"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/period"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.5"
+                                android:gravity="end"
+                                android:padding="5dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/addtiem"
+                            style="@android:style/Widget.Holo.Button"
+                            android:layout_width="200dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="end"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/buttons"
+                            android:text="ADD" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/budgetday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="All Items"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/gridtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/budgetday"
+                    android:layout_marginTop="10dp"
+                    android:fillViewport="false">
+
+                    <RelativeLayout
+                        android:id="@+id/top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:id="@+id/tebo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/colorPrimaryDark"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Item Name" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Debit Account" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Credit ACcount" />
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:background="@drawable/celloutline"
+                                android:padding="5dp"
+                                android:text="Period" />
+
+                        </TableRow>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/itemsin"
+                            android:layout_width="800dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tebo">
+
+                        </android.support.v7.widget.RecyclerView>
+
+
+                    </RelativeLayout>
+
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

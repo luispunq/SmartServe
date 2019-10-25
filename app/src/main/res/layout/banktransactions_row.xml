@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bnktrs"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/btrname"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="name"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btrdesc"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="desc"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btramt"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="amt"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btrdebit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="debit"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btrcredit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="2dp"
+                    android:text="credit"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

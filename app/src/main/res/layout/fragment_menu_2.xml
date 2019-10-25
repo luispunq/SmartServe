@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Search Groups"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/textView19"
+        android:background="@drawable/inputoutline"
+        android:ems="10"
+        android:padding="5dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mastergrouplist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

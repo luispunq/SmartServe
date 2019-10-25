@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loanapplications">
+
+    <LinearLayout
+        android:id="@+id/allloansheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView111"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="start"
+            android:src="@mipmap/smartservelogos" />
+
+        <TextView
+            android:id="@+id/groupname1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/sep1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/colorComplement" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/loansapplicants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/allloansheader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+
+</RelativeLayout>

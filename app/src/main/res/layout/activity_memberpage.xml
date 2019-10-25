@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".memberpage">
+
+    <include
+        android:id="@+id/bars"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/bars"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/thatitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/membersheader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:fadingEdge="vertical"
+                android:focusable="true"
+                android:padding="2dp"
+                android:text="general"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:id="@+id/groupaccountinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/thatitle"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/advancesummgp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashsummarygp"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/advancesgp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/advtitlegp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="Advances"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/advdetailsgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5ogp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Advance Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloanadvgp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3advgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6ogp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Interest"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamountadvgp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardsavesgp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/savingsgp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/savingstitlegp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="SAVINGS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetailsgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title1gp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Savings"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalsavingsgp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetails2gp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/title4gp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/inputoutline"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="5dp"
+                                android:text="More >>"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cashsummarygp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardsavesgp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/loansgp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/loanstitlegp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="LOANS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/loansdetailsgp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5gp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Loan Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloangp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3gp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6gp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Installment Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamountgp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails2gp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/title7gp"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:text="Next Payment Date"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membernextloandategp"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="21/08/2018"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/title88gp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/inputoutline"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="5dp"
+                                android:text="More >>"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/schoolfeesinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/thatitle"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/advancesummsf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashsummarysf"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/advancessf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/advtitlesf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="Advances"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/advdetailssf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5osf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Advance Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloanadvsf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3advsf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6osf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Interest"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamountadvsf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardsavessf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/savingssf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/savingstitlesf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="SAVINGS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetailssf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title1sf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Savings"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalsavingssf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetails2sf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/title4sf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/inputoutline"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="5dp"
+                                android:text="More >>"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cashsummarysf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardsavessf"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/loanssf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/loanstitlesf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="LOANS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/loansdetailssf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5sf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Loan Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloansf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3sf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6sf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Installment Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamountsf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails2sf"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/title7sf"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:text="Next Payment Date"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membernextloandatesf"
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="21/08/2018"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/title88sf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/inputoutline"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="5dp"
+                                android:text="More >>"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/membersheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/memberprofpic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/smartservelogos" />
+
+                <TextView
+                    android:id="@+id/membername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/membergroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="serif"
+                    android:textSize="16sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/contact"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_call_black_24dp" />
+
+                <View
+                    android:id="@+id/sep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="7dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorComplement" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/generalinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/thatitle"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/advancesumm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashsummary"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/advances"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/advtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="Advances"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/advdetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5o"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Advance Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloanadv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3adv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6o"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Interest"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamountadv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/advbal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Change Balance >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/title88adv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Advance History >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardsaves"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/savings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/savingstitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="SAVINGS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Savings"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalsavings"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/savingsdetails2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="end"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/lsfbal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Change Balance >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/title4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Saving History >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cashsummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardsaves"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/loans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/loanstitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="LOANS"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Total Loan Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalloan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Installment Due"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberloanamount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/loansdetails2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="end"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/loanbal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Change Balance >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/title88"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/inputoutline"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:padding="5dp"
+                                    android:text="Loan History >>"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/insurancesum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/advancesumm"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/insurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:clickable="true"
+                                android:fadingEdge="vertical"
+                                android:focusable="true"
+                                android:padding="2dp"
+                                android:text="Insurance"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Insurance Paid"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membertotalinsu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:padding="5dp"
+                                    android:text="Date Paid"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/memberinsudate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:padding="5dp"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mpesareport">
+
+    <RelativeLayout
+        android:id="@+id/supportheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="SMART SERVE CAPITAL LIMITED"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViews"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:text="'For your financial needs'"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textViews2"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textViews"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="MPESA REPORT"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/gridtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@id/supportheader"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:id="@+id/tebo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Date" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Transaction Number" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Name" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Contact" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Amount" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Group" />
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mpesarlist"
+                android:layout_width="960dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tebototals"
+                android:layout_below="@+id/tebo"
+                android:layout_marginRight="0dp" />
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        app:srcCompat="@drawable/done_check_mark" />
+
+</RelativeLayout>

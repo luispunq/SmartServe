@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/accountingentries"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/entrydate"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/entrydetail"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/entrydr"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/entrycr"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:textSize="16sp" />
+
+
+            </TableRow>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

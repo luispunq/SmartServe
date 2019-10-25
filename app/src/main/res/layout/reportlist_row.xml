@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reportlistcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/totalnum"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalGroupname"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalmembers"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalAdvancesCarriedForward"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalLoansCarriedForward"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalSavingsCarriedForward"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/income"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalregs"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/totalofficer"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:background="@drawable/celloutline"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+        </TableRow>
+    </LinearLayout>
+
+</RelativeLayout>

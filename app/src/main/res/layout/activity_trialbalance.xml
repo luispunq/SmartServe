@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trialbalance">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+        android:id="@+id/supportheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="SMART SERVE CAPITAL LIMITED"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViews"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:text="'For your financial needs'"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/textViews"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="TRIAL BALANCE"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/supportheader"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/dailyitems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="false">
+
+                <RelativeLayout
+                    android:id="@+id/dailytop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <TableRow
+                        android:id="@+id/datebo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bankloans"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:background="@color/colorPrimaryDark"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Total"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/totdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/totcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/mpesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cashbank"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Mpesa"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mpesadr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/mpesacr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/fees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/loansintrest"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Fees and Fines Income"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/feesdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/feescr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/memberwithd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/schoolfee"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Risk Fund"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/withddr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/withdcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/liasep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/advancesto"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp"
+                            android:text="LIABILITIES"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/memberdepo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/liasep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Member Deposits"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/depodr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/depocr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/schoolfee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/memberdepo"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="School Fees"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/scdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/sccr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/incomesep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/memberwithd"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp"
+                            android:text="INCOME"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/loansintrest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/incomesep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Interest Income"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/intrdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/intrcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/insurances"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bills"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Professional Fees"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/insudr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/insucr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/expensessep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fees"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="EXPENSES"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/salaries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expensessep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Salaries"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/salodr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/salocr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/rent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/salaries"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Rent"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/rentdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/rentcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/adverts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/insurances"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Other Expenses"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/addr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/adcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/purchases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rent"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Transport and Subsistence"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/purchdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/purchcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/bills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/purchases"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Office Expenses"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/billsdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/billscr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/datebo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Account Name"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Dr"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Cr"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cashbank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/datebo"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Cash/Bank"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/cashdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/cashcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/loansep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/unhandedd"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp"
+                            android:text="NON-CURRENT ASSETS"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/loansto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/loansep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Loan Balances"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/loansgvdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/loansgvcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/advsep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/loansto"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:padding="5dp"
+                            android:text="CURRENT ASSETS"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/advancesto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/advsep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Advance Balances"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/advgvdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/advgvcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/debtorssep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/adverts"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle"
+                        android:textSize="15sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/pettycah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mpesa"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Petty Cash"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/pettydr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/pettycr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/unhandedd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pettycah"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Undanded Over Cash"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/unhandeddr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/unhandedcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/profit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/debtorssep"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Profit"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/profitdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/profitcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/diracc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profit"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Director's Account"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/dirdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/dircr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/suspenseacc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/diracc"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Suspense Account"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/suspensedr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/suspensecr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/sharecap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/suspenseacc"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Share Capital"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/sharecapdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/sharecapcr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/bankloans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sharecap"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:layout_width="450dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text="Profit Reserves"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/bankloansdr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/bankloanscr"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celloutline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

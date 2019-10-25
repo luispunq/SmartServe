@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/default_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/colorPrimaryLight">
+
+
+    <TextView
+        android:id="@+id/defaulername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/defaultpic"
+        android:layout_toEndOf="@+id/defaultpic"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/defaultpic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/deafultparts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/defaulername"
+        android:layout_alignStart="@+id/defaulername"
+        android:layout_alignParentTop="false"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/inboxdatesent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/defaulername"
+        android:layout_below="@+id/deafultparts"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/inboxsep"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorComplement" />
+</RelativeLayout>

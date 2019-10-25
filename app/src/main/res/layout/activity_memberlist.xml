@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".memberlist">
+
+    <include
+        android:id="@+id/bars"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bars"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:text="Member Name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView19"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:layout_toEndOf="@+id/textView19"
+        android:background="@drawable/inputoutline"
+        android:ems="10"
+        android:padding="5dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/memberslist"
+        android:layout_below="@id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

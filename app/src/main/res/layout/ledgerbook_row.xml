@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ledgerbookcard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/ledgergroup"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/celloutline"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/ledgeramountgiven"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/celloutline"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/ledgeramount"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/celloutline"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/ledgerofficer"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/celloutline"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/ledgerlink"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_print_black_24dp"
+                android:padding="5dp" />
+
+        </TableRow>
+    </LinearLayout>
+</RelativeLayout>

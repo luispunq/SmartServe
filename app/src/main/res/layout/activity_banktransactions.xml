@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".banktransactions">
+
+    <HorizontalScrollView
+        android:id="@+id/gridtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/topdetails"
+                android:layout_width="1400dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pgname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="TRANSACTIONS"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/tebo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topdetails"
+                android:background="@color/colorPrimaryDark"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Name" />
+
+                <TextView
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Description" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Amount" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Debit" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="Credit" />
+
+
+            </TableRow>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/memberstat_list"
+                android:layout_width="1400dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tebototals"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/tebo2"
+                android:layout_centerHorizontal="false"
+                android:background="@android:color/white" />
+
+            <TableRow
+                android:id="@+id/tebototals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:showDividers="middle"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp"
+                    android:text="TOTAL" />
+
+                <TextView
+                    android:id="@+id/totsav"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/totadv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/totloans"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/totrisk"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/celloutline"
+                    android:padding="5dp" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

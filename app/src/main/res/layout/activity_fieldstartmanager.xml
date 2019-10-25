@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".fieldstartmanager">
+
+    <LinearLayout
+        android:id="@+id/fieldstartheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/employeeimage"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_above="@+id/employeename"
+                android:layout_gravity="start"
+                android:src="@mipmap/stockprofile" />
+
+            <TextView
+                android:id="@+id/employeename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lpsep1"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginBottom="5dp"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/lpsep1"
+                android:layout_width="350dp"
+                android:layout_height="7dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorComplement" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fieldstartheader"
+        android:layout_margin="5dp"
+        android:text="CASH GIVEN"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/moneygiven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView22"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/inputoutline"
+        android:ems="10"
+        android:hint="Enter Cash Handed Over"
+        android:inputType="textPersonName|number"
+        android:padding="15dp"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/moneygiven2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/moneygiven"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/inputoutline"
+        android:ems="10"
+        android:hint="Enter Transport and Misc. Cash"
+        android:inputType="textPersonName|number"
+        android:padding="15dp"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/moneygiven"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorComplement"
+        android:text="OK"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/upcomingmeetings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button6"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/moneygiven2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button6"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/buttons"
+        android:text="DONE"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

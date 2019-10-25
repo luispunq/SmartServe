@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loanapplication">
+
+    <include layout="@layout/app_bar" android:id="@+id/bard" />
+
+    <ScrollView
+        android:id="@+id/loanappdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimaryLight">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/loanappmembersheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/loanappmemberprofpic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="start"
+                    android:src="@mipmap/smartservelogos" />
+
+                <TextView
+                    android:id="@+id/loanappmembername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/loanappmembergroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/loanappsep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorComplement" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loanappmembersheader"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/loanappstats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Current Savings"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/savingstat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loanappstat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/loanappstats"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title4"
+                            android:layout_width="126dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:padding="5dp"
+                            android:text="Loan Limit"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/loanstat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardd"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:fadingEdge="horizontal"
+                    app:srcCompat="@mipmap/loanreq" />
+
+                <LinearLayout
+                    android:id="@+id/amountreq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title0"
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="Amount Applied For"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/reqamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:ems="10"
+                        android:hint="Enter Amount"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/intrestcharged"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title11"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="Rate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/loanintrest"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/installments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center|start"
+                        android:text="Months"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/title10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:hint="Enter Months"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/monthlypayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title13"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:text="Monthly Installments"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/title14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="start"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/gurantordetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/gurtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="GUARANTORS"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/gur1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gurtitle"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Guarantor 1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/gurname1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/gurid1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurname1"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor ID"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/gurcont1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurid1"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Phone"
+                                    android:inputType="phone" />
+
+                                <Button
+                                    android:id="@+id/save1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/gurcont1"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/gur2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gur1"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Guarantor 2"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/gurname2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/gurid2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurname2"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor ID"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/gurcont2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurid2"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Phone"
+                                    android:inputType="phone" />
+
+                                <Button
+                                    android:id="@+id/save2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/gurcont2"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/gur3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gur2"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Guarantor 3"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/gurname3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/gurid3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurname3"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor ID"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/gurcont3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/gurid3"
+                                    android:ems="10"
+                                    android:hint="Enter Guarantor Phone"
+                                    android:inputType="phone" />
+
+                                <Button
+                                    android:id="@+id/save3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/gurcont3"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/securitydetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/secutitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="SECURITY"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:id="@+id/sec1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/secutitle"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Item 1"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/itemname1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Item Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/itemmktval1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemname1"
+                                    android:ems="10"
+                                    android:hint="Enter Market Value"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/itemcmpval1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemmktval1"
+                                    android:ems="10"
+                                    android:hint="Enter Compressed Value"
+                                    android:inputType="phone" />
+
+                                <EditText
+                                    android:id="@+id/itemSNO1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemcmpval1"
+                                    android:ems="10"
+                                    android:hint="Enter Serial Number"
+                                    android:inputType="text" />
+
+                                <Button
+                                    android:id="@+id/save4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/itemSNO1"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sec2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sec1"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Item 2"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/itemname2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Item Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/itemmktval2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemname2"
+                                    android:ems="10"
+                                    android:hint="Enter Market Value"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/itemcmpval2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemmktval2"
+                                    android:ems="10"
+                                    android:hint="Enter Compressed Value"
+                                    android:inputType="phone" />
+
+                                <EditText
+                                    android:id="@+id/itemSNO2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemcmpval2"
+                                    android:ems="10"
+                                    android:hint="Enter Serial Number"
+                                    android:inputType="text" />
+
+                                <Button
+                                    android:id="@+id/save5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/itemSNO2"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sec3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sec2"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Item 3"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+
+                                <EditText
+                                    android:id="@+id/itemname3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Enter Item Name"
+                                    android:inputType="textPersonName" />
+
+                                <EditText
+                                    android:id="@+id/itemmktval3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemname3"
+                                    android:ems="10"
+                                    android:hint="Enter Market Value"
+                                    android:inputType="number" />
+
+                                <EditText
+                                    android:id="@+id/itemcmpval3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemmktval3"
+                                    android:ems="10"
+                                    android:hint="Enter Compressed Value"
+                                    android:inputType="phone" />
+
+                                <EditText
+                                    android:id="@+id/itemSNO3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/itemcmpval3"
+                                    android:ems="10"
+                                    android:hint="Enter Serial Number"
+                                    android:inputType="text" />
+
+                                <Button
+                                    android:id="@+id/save6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@id/itemSNO3"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/colorComplement"
+                                    android:text="Save" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/recommendations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/recotitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="RECOMMENDATION"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/recomendation"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@id/recotitle"
+                            android:hint="Enter Recommendation"
+                            android:inputType="textMultiLine" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/formattach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/title15"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="start"
+                        android:text="Link With Form Image"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/loanappbutton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttons"
+                android:text="SUBMIT" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".setupgroup">
+
+
+    <RelativeLayout
+        android:id="@+id/accountsetupheader"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_below="@+id/imageView5"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5dp"
+            android:text="Please setup group details"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/transdetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/accountsetupheader"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimaryLight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/groupbutton"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/profilename4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/buttons"
+                android:elevation="7dp"
+                android:text="FINISH"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="450dp" />
+
+            <EditText
+                android:id="@+id/profilename4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilename2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter Group Num"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/gimagebtn"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textView21"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:contentDescription="Profile Image"
+                android:src="@mipmap/smartservelogos" />
+
+            <EditText
+                android:id="@+id/profilename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gimagebtn"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter Group Name"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <EditText
+                android:id="@+id/profilename2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilename3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/inputoutline"
+                android:ems="10"
+                android:hint="Enter Group Location"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <Spinner
+                android:id="@+id/profilename3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilename"
+                android:layout_centerHorizontal="false"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:padding="20dp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Select Group Image"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
